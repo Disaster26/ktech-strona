@@ -377,7 +377,7 @@ p{margin:0}
 .mod .prof{max-width:320px}
 .tab-wym.tab-pp{min-width:0}
 .tab-pp .tab-ozn,.tab-pp tbody th{position:static;box-shadow:none}
-.tab-pp tbody th.tab-zak{vertical-align:top;border-right:1px solid #E1E4E8;border-bottom:1px solid #C3C8CE;white-space:normal}
+.tab-pp tbody th.tab-zak{vertical-align:top;border-right:1px solid #E1E4E8;border-bottom:1px solid #C3C8CE;white-space:normal;min-width:10.5em;max-width:16em;overflow-wrap:normal;hyphens:manual}
 .tab-pp tbody tr:hover th{background:#fff}
 .kar-tab .tab-ramka:has(.tab-pp){max-width:720px}
 

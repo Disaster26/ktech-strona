@@ -116,7 +116,7 @@
         if(!ok){var d1=num(r.getAttribute('data-d1')),d3=num(r.getAttribute('data-d3')),d2=num(r.getAttribute('data-d2'));ok=Math.abs(d1-v)<=10||Math.abs(d3-v)<=10||Math.abs(d2-v)<=10;}
         r.hidden=!ok;if(ok)n++;
       });
-      info.textContent=isNaN(v)?rows.length+' rozmiarów w typoszeregu':'Pasuje: '+n+' z '+rows.length+' (średnica ±10 mm)';
+      info.textContent=isNaN(v)?'Wpisz średnicę d1, d2 lub D3':'Pasujące rozmiary: '+n+' (średnica ±10 mm)';
       brak.hidden=!(n===0);czysc.hidden=isNaN(v);
     };
     fi.addEventListener('input',filtruj);
