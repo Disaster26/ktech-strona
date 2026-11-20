@@ -425,3 +425,15 @@ p{margin:0}
 .stopka-dol a:hover{color:#fff}
 .prof-img{width:112px;height:63px;object-fit:contain;background:#fff}
 .ko-tresc{margin-top:clamp(28px,4vw,44px)}
+/* Oferta (podstrona): obszary jeden pod drugim, zdjęcie obok opisu */
+.karty-pelne .karta-h{margin-top:18px}
+@media (min-width:700px){
+  .karty.karty-pelne{grid-template-columns:minmax(0,1fr);gap:clamp(36px,5vw,64px)}
+  .karty-pelne .karta,.karty-pelne .karta-duza{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);column-gap:clamp(24px,4vw,56px);align-items:start;grid-column:auto;grid-row:auto}
+  .karty-pelne .karta>.sw{grid-row:1/span 6;min-height:0;flex:none}
+  .karty-pelne .karta-duza .sw,.karty-pelne .karta-duza .sw-tor{height:auto}
+  .karty-pelne .karta-duza .sw-sl{aspect-ratio:638/415;height:auto}
+  .karty-pelne .karta-h{margin-top:0}
+  .karty-pelne .karta>*:not(.sw){grid-column:2}
+  .karty-pelne .karta-link{justify-self:start}
+}
