@@ -395,6 +395,9 @@ p{margin:0}
 .tresc li+li{margin-top:.35em}
 .tresc a{color:var(--gr);text-decoration-color:var(--or);text-decoration-thickness:2px;text-underline-offset:3px}
 .glowa .tresc{margin-top:14px;color:var(--mut);font-size:1.06rem;max-width:62ch}
+.glowa .tresc h2{font-size:clamp(1.2rem,2vw,1.5rem);line-height:1.3;margin-top:.2em;color:var(--tx)}
+.glowa .tresc .do-katalogu{font-weight:600}
+#katalog{scroll-margin-top:96px}
 .pod-glowa h1,.wyc-txt h1,.ko-txt h1,.masz-in h1{font-size:clamp(2rem,4vw,3.2rem)}
 .masz-in h1{color:#fff}
 .masz-in .okruchy,.masz-in .okruchy a{color:#AEB4BB}
