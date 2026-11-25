@@ -123,4 +123,20 @@
     czysc.addEventListener('click',function(){fi.value='';filtruj();fi.focus();});
     filtruj();
   }
+
+  // zakładki na stronie Elementy metalowe (bez JS widać obie listy)
+  var zak=d.querySelector('.zakladki');
+  if(zak){
+    var tabs=[].slice.call(zak.querySelectorAll('[role=tab]'));
+    var pokaz=function(t,fokus){
+      tabs.forEach(function(x){var on=x===t;x.setAttribute('aria-selected',String(on));x.tabIndex=on?0:-1;d.getElementById(x.getAttribute('aria-controls')).hidden=!on;});
+      if(fokus)t.focus();
+    };
+    tabs.forEach(function(t,i){
+      t.addEventListener('click',function(){pokaz(t);history.replaceState(null,'','#'+(i?'elementy-zlaczne':'katalog'));});
+      t.addEventListener('keydown',function(e){var k=e.key==='ArrowRight'?1:e.key==='ArrowLeft'?-1:0;if(k){var n=tabs[(i+k+tabs.length)%tabs.length];pokaz(n,true);e.preventDefault();}});
+    });
+    var zHash=function(){var h=location.hash;pokaz(h==='#elementy-zlaczne'||h==='#zlaczne'?tabs[1]:tabs[0]);if(h==='#elementy-zlaczne'||h==='#zlaczne')zak.scrollIntoView();};
+    zHash();window.addEventListener('hashchange',zHash);
+  }
 })();

@@ -444,3 +444,24 @@ p{margin:0}
   .karty-pelne .karta>*:not(.sw){grid-column:2}
   .karty-pelne .karta-link{justify-self:start}
 }
+/* Elementy metalowe: katalog PDF i zakładki */
+.kat-linki{display:flex;flex-wrap:wrap;align-items:center;gap:12px 26px;margin-top:18px;font-size:1.06rem}
+.kat-linki .do-katalogu{font-weight:600;color:var(--gr);text-decoration-color:var(--or);text-decoration-thickness:2px;text-underline-offset:3px}
+.pdf-pobierz{display:inline-flex;align-items:center;gap:9px;min-height:44px;padding:0 16px 0 12px;font:600 16px/1.2 Barlow,sans-serif;color:var(--gr);text-decoration:none;border:2px solid var(--gr);background:#fff;transition:background .2s,color .2s}
+.pdf-pobierz svg{width:22px;height:22px;flex:none;fill:none;stroke:var(--or);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.pdf-pobierz:hover{background:var(--gr);color:#fff}
+.pdf-pobierz.pdf-duzy{margin-top:16px}
+.zakladki{display:flex;gap:6px;margin-top:clamp(14px,2vw,22px);border-bottom:3px solid var(--gr);overflow-x:auto;scrollbar-width:none}
+.zakladki::-webkit-scrollbar{display:none}
+.zakladki [role=tab]{flex:0 0 auto;min-height:50px;padding:10px clamp(14px,2.4vw,26px);font:700 clamp(15px,1.6vw,18px)/1.2 "Barlow SC",Barlow,sans-serif;color:var(--mut);background:var(--li);border:0;cursor:pointer;white-space:nowrap}
+.zakladki [role=tab]:hover{color:var(--gr)}
+.zakladki [role=tab][aria-selected=true]{background:var(--gr);color:#fff;box-shadow:inset 0 4px 0 var(--or)}
+.zakladki [role=tab]:focus-visible{outline:3px solid var(--or);outline-offset:-3px}
+.zak-panel[hidden]{display:none}
+.zak-panel>.grupa-tyt:first-child{margin-top:clamp(22px,3vw,34px)}
+.zak-tyt{font-size:clamp(1.4rem,2.6vw,2rem);margin-top:clamp(24px,3vw,36px)}
+.zak-lead{max-width:62ch;margin-top:10px;color:var(--mut);font-size:1.06rem}
+.zak-lead p+p{margin-top:.6em}
+.kat-el .kat-tab{align-self:flex-start;margin-top:4px;font-size:14px;font-weight:600;color:var(--gr);text-decoration-color:var(--or);text-decoration-thickness:2px;text-underline-offset:3px}
+#elementy-zlaczne{scroll-margin-top:96px}
+@media (max-width:420px){.zakladki [role=tab]{padding:10px 12px;font-size:15px}.kat-linki{gap:12px 18px}}
